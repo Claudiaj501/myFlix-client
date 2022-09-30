@@ -4,6 +4,7 @@ import axios from 'axios';
 import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
+import { RegistrationView } from "../registration-view/registration-view";
 
 export class MainView extends React.Component {
 
@@ -13,7 +14,8 @@ export class MainView extends React.Component {
     this.state = {
       movies: [],
       selectedMovie: null,
-      user: null
+      user: null,
+      isRegistering: false
     };
   }
 
@@ -74,7 +76,7 @@ export class MainView extends React.Component {
 
 
   componentDidMount(){
-    axios.get('https://[APP-NAME].herokuapp.com/movies')
+    axios.get('https://myflix-firstapi.herokuapp.com/movies')
       .then(response => {
         this.setState({
           movies: response.data
@@ -88,9 +90,15 @@ export class MainView extends React.Component {
 
   /*When a movie is clicked, this function is invoked and updates the state of the `selectedMovie` *property to that movie*/
 
-  setSelectedMovie(movie) {
+  setSelectedMovie(newSelectedMovie) {
     this.setState({
-      selectedMovie: movie
+      selectedMovie: newSelectedMovie,
+    });
+  }
+
+  setIsRegistering(status) {
+    this.setState({
+      isRegistering: status,
     });
   }
 
@@ -99,6 +107,13 @@ export class MainView extends React.Component {
   onLoggedIn(user) {
     this.setState({
       user
+    });
+  }
+
+  logOut() {
+    this.setState({
+      selectedMovie: null,
+      user: null,
     });
   }
 
