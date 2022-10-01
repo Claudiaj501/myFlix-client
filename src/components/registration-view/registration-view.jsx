@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 export function RegistrationView(props) {
   const [username, setUsername] = useState("");
@@ -9,6 +10,7 @@ export function RegistrationView(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(username, password, email, birth);
+    props.onRegistration(username);
   };
 
   return (
@@ -47,9 +49,8 @@ export function RegistrationView(props) {
             onChange={(e) => setBirthday(e.target.value)}
           />
         </label>
-        <button type="button" onClick={handleSubmit}>
-          Register
-        </button>
+        <button type="submit" onClick={handleSubmit}>Submit</button>
+
         <a
           href="#"
           onClick={() => {
@@ -62,3 +63,6 @@ export function RegistrationView(props) {
     </div>
   );
 }
+RegistrationView.propTypes = {
+  onRegistration: PropTypes.func.isRequired,
+};
