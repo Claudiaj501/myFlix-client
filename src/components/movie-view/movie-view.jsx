@@ -1,20 +1,16 @@
-<<<<<<< HEAD
 import React from 'react';
 import PropTypes from 'prop-types';
-=======
-import React from "react";
-import PropTypes from "prop-types";
->>>>>>> gh-pages
 
 export class MovieView extends React.Component {
+
   keypressCallback(event) {
     console.log(event.key);
   }
   componentDidMount() {
-    document.addEventListener("keypress", this.keypressCallback);
+    document.addEventListener('keypress', this.keypressCallback);
   }
   componentWillUnmount() {
-    document.removeEventListener("keypress", this.keypressCallback);
+    document.removeEventListener('keypress', this.keypressCallback);
   }
   render() {
     const { movie, onBackClick } = this.props;
@@ -31,34 +27,16 @@ export class MovieView extends React.Component {
           <span className="label">Description: </span>
           <span className="value">{movie.Description}</span>
         </div>
-        {/* <div className="movie-genre">
-          <span className="label">Genre: </span>
-          <span className="value">{movie.Genre}</span>
-        </div>
-        <div className="movie-director">
-          <span className="label">Director: </span>
-          <span className="value">{movie.Director}</span>
-        </div> */}
-        <button
-          onClick={() => {
-            onBackClick(null);
-          }}
-        >
-          Back
-        </button>
+        <button onClick={() => { onBackClick(null); }}>Back</button>
       </div>
     );
   }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> gh-pages
 MovieView.propTypes = {
   movie: PropTypes.shape({
     Title: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired,
-<<<<<<< HEAD
     Featured: PropTypes.bool.isRequired,
     ImagePath: PropTypes.string.isRequired,
     _id: PropTypes.string.isRequired,
@@ -74,14 +52,4 @@ MovieView.propTypes = {
     }),
   }).isRequired,
   onBackClick: PropTypes.func.isRequired,
-=======
-    Genre: PropTypes.shape({
-      Name: PropTypes.string.isRequired
-    }),
-    Director: PropTypes.shape({
-      Name: PropTypes.string.isRequired
-    }),
-    ImagePath: PropTypes.string.isRequired
-  }).isRequired,
->>>>>>> gh-pages
 };

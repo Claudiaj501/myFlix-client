@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import PropTypes from 'prop-types';
-=======
 import PropTypes from "prop-types";
->>>>>>> gh-pages
 
 export function RegistrationView(props) {
   const [username, setUsername] = useState("");
@@ -52,14 +48,11 @@ export function RegistrationView(props) {
             onChange={(e) => setBirthday(e.target.value)}
           />
         </label>
-<<<<<<< HEAD
+
         <button type='submit' onClick={handleSubmit}>
         Submit
       </button>
-=======
-        <button type="submit" onClick={handleSubmit}>Submit</button>
 
->>>>>>> gh-pages
         <a
           href="#"
           onClick={() => {
@@ -72,12 +65,8 @@ export function RegistrationView(props) {
     </div>
   );
 }
-<<<<<<< HEAD
 
 RegistrationView.propTypes = {
-  onRegister: PropTypes.func.isRequired,
-=======
-RegistrationView.propTypes = {
   onRegistration: PropTypes.func.isRequired,
->>>>>>> gh-pages
+
 };

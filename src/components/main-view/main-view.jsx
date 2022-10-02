@@ -1,74 +1,57 @@
-<<<<<<< HEAD
 import React from 'react';
 import axios from 'axios';
-=======
-import React from "react";
-import axios from "axios";
->>>>>>> gh-pages
 import PropTypes from 'prop-types';
 
-import { LoginView } from "../login-view/login-view";
-import { MovieCard } from "../movie-card/movie-card";
-import { MovieView } from "../movie-view/movie-view";
+import { LoginView } from '../login-view/login-view';
+import { MovieCard } from '../movie-card/movie-card';
+import { MovieView } from '../movie-view/movie-view';
 import { RegistrationView } from "../registration-view/registration-view";
 
 export class MainView extends React.Component {
   constructor() {
     super();
+// Initial state is set to null
     this.state = {
       movies: [],
       selectedMovie: null,
       user: null,
-      isRegistering: false,
+      isRegistering: false
     };
   }
-
-  componentDidMount() {
-    axios
-      .get("https://myflix-firstapi.herokuapp.com/movies")
-      .then((response) => {
+  componentDidMount(){
+    axios.get('https://myflix-firstapi.herokuapp.com/movies')
+      .then(response => {
         this.setState({
-          movies: response.data,
+          movies: response.data
         });
       })
-      .catch((error) => {
+      .catch(error => {
         console.log(error);
       });
   }
-
+  /*When a movie is clicked, this function is invoked and updates the state of the `selectedMovie` *property to that movie*/
   setSelectedMovie(newSelectedMovie) {
     this.setState({
       selectedMovie: newSelectedMovie,
     });
   }
-
-  onRegister(registered, user) {
-    this.setState({
-      registered,
-      user,
-    });
-  }
-  
   setIsRegistering(status) {
     this.setState({
       isRegistering: status,
     });
   }
-  
-
+/* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/
   onLoggedIn(user) {
     this.setState({
-      user,
+      user
     });
   }
-
   logOut() {
     this.setState({
       selectedMovie: null,
       user: null,
     });
   }
-  
 
   render() {
     const { movies, selectedMovie, user } = this.state;
@@ -123,9 +106,4 @@ export class MainView extends React.Component {
     );
   }
 }
-<<<<<<< HEAD
-=======
-
-MainView.propTypes = {};
->>>>>>> gh-pages
 export default MainView;
