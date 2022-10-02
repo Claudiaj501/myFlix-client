@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import PropTypes from 'prop-types';
 
 import { LoginView } from "../login-view/login-view";
 import { MovieCard } from "../movie-card/movie-card";
@@ -36,11 +37,19 @@ export class MainView extends React.Component {
     });
   }
 
+  onRegister(registered, user) {
+    this.setState({
+      registered,
+      user,
+    });
+  }
+  
   setIsRegistering(status) {
     this.setState({
       isRegistering: status,
     });
   }
+  
 
   onLoggedIn(user) {
     this.setState({
@@ -54,6 +63,7 @@ export class MainView extends React.Component {
       user: null,
     });
   }
+  
 
   render() {
     const { movies, selectedMovie, user } = this.state;
@@ -108,4 +118,6 @@ export class MainView extends React.Component {
     );
   }
 }
+
+MainView.propTypes = {};
 export default MainView;

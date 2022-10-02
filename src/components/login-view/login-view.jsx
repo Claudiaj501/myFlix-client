@@ -4,13 +4,11 @@ import PropTypes from "prop-types";
 export function LoginView(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(username, password);
     props.onLoggedIn(username);
   };
-
   return (
     <div>
       <h1>Login</h1>
