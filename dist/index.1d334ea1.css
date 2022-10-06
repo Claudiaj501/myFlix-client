@@ -1,0 +1,136 @@
+.login-view {
+  background-color: #181818;
+  border: solid black 2px;
+  border-radius: 15px;
+  padding: 50px;
+  color: white;
+}
+
+.register-row {
+  margin-top: 10px;
+  padding-top: 30px;
+}
+
+.login-view__line {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .login-form {
+    margin-top: 10px;
+  }
+  .register-row {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .login-view {
+    padding: 5px;
+  }
+}
+.movie-view {
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: #181815;
+  color: white;
+}
+
+img {
+  display: block;
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 700px;
+  height: auto;
+  margin: 20px auto;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#back-button {
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  border: none;
+  margin: 5px;
+  padding: 0 0 7px 0;
+}
+
+#favorite-button {
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  border: none;
+  margin: 5px;
+  padding: 0 0 7px 0;
+}
+
+.movie-view-button:hover {
+  cursor: pointer;
+}
+
+.movie-view__title-line {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: Lucida Console;
+  padding: 2px;
+}
+
+.movie-view__line__label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.movie-view__line__value {
+  font-size: 18px;
+}
+
+.description {
+  padding-top: 3em;
+}
+.registration-view {
+  background-color: #181818;
+  border: solid black 2px;
+  border-radius: 15px;
+  padding: 50px;
+  color: white;
+}
+
+.registration-form {
+  padding-top: 30px;
+}
+
+.registration-form__label-tips {
+  font-style: italic;
+  font-size: 12px;
+  color: gray;
+  text-align: right;
+}
+
+.registration-form__line {
+  margin-top: 10px;
+}
+
+.register-button {
+  margin-top: 20px;
+}
+#logout-button {
+  float: right;
+  margin: 10px;
+}
+
+#logout-button:hover {
+  cursor: pointer;
+}
+.display-2 {
+  color: white;
+}
+
+#cards {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+html body {
+  background-color: #3f2367;
+  margin: 10px;
+}
+/*# sourceMappingURL=index.1d334ea1.css.map */
