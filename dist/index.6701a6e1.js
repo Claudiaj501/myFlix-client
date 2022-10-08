@@ -31337,8 +31337,8 @@ MovieView.propTypes = {
         Director: _propTypesDefault.default.shape({
             Name: _propTypesDefault.default.string.isRequired,
             Bio: _propTypesDefault.default.string.isRequired,
-            BirthYear: _propTypesDefault.default.number.isRequired,
-            DeathYear: _propTypesDefault.default.number
+            Birth: _propTypesDefault.default.number.isRequired,
+            Death: _propTypesDefault.default.number
         })
     }).isRequired,
     onBackClick: _propTypesDefault.default.func.isRequired
