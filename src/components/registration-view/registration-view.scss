@@ -1,6 +1,6 @@
 .registration-view {
-  background-color: #181818;
-  border: solid black 2px;
+  background-color: #000500;
+  border: solid #A6A867 2px;
   border-radius: 15px;
   padding: 50px;
   color: white;
@@ -21,6 +21,15 @@
   margin-top: 10px;
 }
 
-.register-button {
+#register-button {
   margin-top: 20px;
+  background-color: #E3DC95;
+  border: solid #A6A867 2px;
+  color: black;
+  transition-duration: 0.5s;
+}
+
+#register-button:hover {
+  background-color: #A6A867; 
+  color: white;
 }

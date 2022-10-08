@@ -2,7 +2,7 @@
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: #181815;
+  background-color: #000500;
   color: white;
 }
 
@@ -26,16 +26,28 @@ img {
 }
 
 #favorite-button {
-  font-size: 30px;
-  background-color: white;
-  color: black;
-  border: none;
+  font-size: 20px;
+  background-color: #E3DC95;
+  color: #000500;
+  border: solid #A6A867 2px;
   margin: 5px;
-  padding: 0 0 7px 0;
 }
 
-.movie-view-button:hover {
+#favorite-button:hover {
   cursor: pointer;
+  background-color: #A6A867;
+}
+
+
+#movie-view-button {
+  background-color: #E3DC95;
+  color: #000500;
+  border: solid #A6A867 2px;
+}
+
+#movie-view-button:hover {
+  cursor: pointer;
+  background-color: #A6A867;
 }
 
 .movie-view__title-line {

@@ -1,8 +1,14 @@
 #logout-button {
   float: right;
   margin: 10px;
+  background-color: #E3DC95;
+  border: solid #A6A867 2px;
+  color: black;
+  transition-duration: 0.5s;
 }
 
 #logout-button:hover {
   cursor: pointer;
+  background-color: #A6A867; 
+  color: white;
 }

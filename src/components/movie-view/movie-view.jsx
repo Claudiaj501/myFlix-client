@@ -20,7 +20,7 @@ export class MovieView extends React.Component {
         <Col lg={8}>
           <div className='movie-view__title-line'>
             <Button
-              className='movie-view-button'
+              id='movie-view-button'
               onClick={() => {
                 onBackClick(null);
               }}
@@ -28,7 +28,7 @@ export class MovieView extends React.Component {
               &lt;
             </Button>
             <span className='movie-view__title'> {movie.Title} </span>
-            <Button className='movie-view-button'>&#10032;</Button>
+            <Button id='favorite-button'>&#9733;</Button>
           </div>
 
           <div className='movie-info'>

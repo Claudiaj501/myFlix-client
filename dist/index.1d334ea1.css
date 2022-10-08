@@ -1,18 +1,39 @@
 .login-view {
-  background-color: #181818;
-  border: solid black 2px;
+  background-color: #000500;
+  border: solid #A6A867 2px;
   border-radius: 15px;
   padding: 50px;
   color: white;
 }
 
 .register-row {
-  margin-top: 10px;
+  margin-top: 40px;
   padding-top: 30px;
+  border-top: solid #7A5980 2px;
+}
+
+#login-button {
+  background-color: #E3DC95;
+  border: solid #A6A867 2px;
+  color: black;
+  transition-duration: 0.5s;
+}
+
+#login-button:hover {
+  background-color: #A6A867;
+  color: white;
 }
 
 .login-view__line {
   margin-top: 10px;
+}
+
+#register-btn {
+  margin-left: 0.1px;
+}
+
+p {
+  margin-right: 0.1px;
 }
 
 @media (min-width: 768px) {
@@ -32,7 +53,7 @@
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: #181815;
+  background-color: #000500;
   color: white;
 }
 
@@ -56,16 +77,27 @@ img {
 }
 
 #favorite-button {
-  font-size: 30px;
-  background-color: white;
-  color: black;
-  border: none;
+  font-size: 20px;
+  background-color: #E3DC95;
+  color: #000500;
+  border: solid #A6A867 2px;
   margin: 5px;
-  padding: 0 0 7px 0;
 }
 
-.movie-view-button:hover {
+#favorite-button:hover {
   cursor: pointer;
+  background-color: #A6A867;
+}
+
+#movie-view-button {
+  background-color: #E3DC95;
+  color: #000500;
+  border: solid #A6A867 2px;
+}
+
+#movie-view-button:hover {
+  cursor: pointer;
+  background-color: #A6A867;
 }
 
 .movie-view__title-line {
@@ -88,8 +120,8 @@ img {
   padding-top: 3em;
 }
 .registration-view {
-  background-color: #181818;
-  border: solid black 2px;
+  background-color: #000500;
+  border: solid #A6A867 2px;
   border-radius: 15px;
   padding: 50px;
   color: white;
@@ -110,27 +142,42 @@ img {
   margin-top: 10px;
 }
 
-.register-button {
+#register-button {
   margin-top: 20px;
+  background-color: #E3DC95;
+  border: solid #A6A867 2px;
+  color: black;
+  transition-duration: 0.5s;
+}
+
+#register-button:hover {
+  background-color: #A6A867;
+  color: white;
 }
 #logout-button {
   float: right;
   margin: 10px;
+  background-color: #E3DC95;
+  border: solid #A6A867 2px;
+  color: black;
+  transition-duration: 0.5s;
 }
 
 #logout-button:hover {
   cursor: pointer;
+  background-color: #A6A867;
+  color: white;
 }
 .display-2 {
   color: white;
 }
 
 #cards {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 html body {
-  background-color: #3f2367;
+  background-color: #7A5980;
   margin: 10px;
 }
 /*# sourceMappingURL=index.1d334ea1.css.map */

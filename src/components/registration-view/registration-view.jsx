@@ -149,7 +149,7 @@ export function RegistrationView(props) {
           <Col md={labelSize + fieldSize + emptySize - 2}></Col>
           <Col md={1}>
             <Button
-              className='register-button'
+              id='register-button'
               variant='primary'
               type='submit'
               onClick={handleSubmit}

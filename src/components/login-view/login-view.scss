@@ -1,20 +1,42 @@
 .login-view {
 
-  background-color: #181818;
-  border: solid black 2px;
+  background-color: #000500;
+  border: solid #A6A867 2px;
   border-radius: 15px;
   padding: 50px;
   color: white;
 }
 
 .register-row {
-  margin-top: 10px;
+  margin-top: 40px;
   padding-top: 30px;
+  border-top: solid #7A5980 2px;
+}
+
+#login-button {
+  background-color: #E3DC95;
+  border: solid #A6A867 2px;
+  color: black;
+  transition-duration: 0.5s;
+}
+
+#login-button:hover {
+  background-color: #A6A867; 
+  color: white;
 }
 
 .login-view__line {
   margin-top: 10px;
 }
+
+#register-btn {
+  margin-left: 0.1px;
+}
+
+p {
+  margin-right: 0.1px;
+}
+
 
 @media (min-width: 768px) {
   .login-form {

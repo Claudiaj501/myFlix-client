@@ -64,19 +64,22 @@ export function LoginView(props) {
         <Row className='login-view__line'>
           <Col md={8}></Col>
           <Col>
-            <Button variant='primary' type='submit' onClick={handleSubmit}>
+            <Button id= 'login-button'
+            variant='primary' type='submit' onClick={handleSubmit}>
               Log in
             </Button>
           </Col>
         </Row>
       </Form>
+      <Row>
+      </Row>
       <Row className= 'register-row '>
         <Col sm={0} md={5}></Col>
         <Col sm={12} md={3}>
-          <p>Don't have an account? </p>
+          <p className= 'd-flex justify-content-end'>Don't have an account? </p>
         </Col>
         <Col>
-          <Button
+          <Button id= 'register-btn'
             variant='secondary'
             type='submit'
             onClick={handleClickRegister}

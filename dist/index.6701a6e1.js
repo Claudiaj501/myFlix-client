@@ -29673,6 +29673,7 @@ function LoginView(props) {
                                 },
                                 __self: this,
                                 children: /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
+                                    id: "login-button",
                                     variant: "primary",
                                     type: "submit",
                                     onClick: handleSubmit,
@@ -29688,11 +29689,18 @@ function LoginView(props) {
                     })
                 ]
             }),
+            /*#__PURE__*/ _jsxRuntime.jsx(_rowDefault.default, {
+                __source: {
+                    fileName: "src/components/login-view/login-view.jsx",
+                    lineNumber: 74
+                },
+                __self: this
+            }),
             /*#__PURE__*/ _jsxRuntime.jsxs(_rowDefault.default, {
                 className: "register-row ",
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 73
+                    lineNumber: 76
                 },
                 __self: this,
                 children: [
@@ -29701,7 +29709,7 @@ function LoginView(props) {
                         md: 5,
                         __source: {
                             fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 74
+                            lineNumber: 77
                         },
                         __self: this
                     }),
@@ -29710,13 +29718,14 @@ function LoginView(props) {
                         md: 3,
                         __source: {
                             fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 75
+                            lineNumber: 78
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx("p", {
+                            className: "d-flex justify-content-end",
                             __source: {
                                 fileName: "src/components/login-view/login-view.jsx",
-                                lineNumber: 76
+                                lineNumber: 79
                             },
                             __self: this,
                             children: "Don't have an account? "
@@ -29725,16 +29734,17 @@ function LoginView(props) {
                     /*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
                         __source: {
                             fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 78
+                            lineNumber: 81
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
+                            id: "register-btn",
                             variant: "secondary",
                             type: "submit",
                             onClick: handleClickRegister,
                             __source: {
                                 fileName: "src/components/login-view/login-view.jsx",
-                                lineNumber: 79
+                                lineNumber: 82
                             },
                             __self: this,
                             children: "Register"
@@ -31129,7 +31139,7 @@ class MovieView extends _reactDefault.default.Component {
                             __self: this,
                             children: [
                                 /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
-                                    className: "movie-view-button",
+                                    id: "movie-view-button",
                                     onClick: ()=>{
                                         onBackClick(null);
                                     },
@@ -31154,13 +31164,13 @@ class MovieView extends _reactDefault.default.Component {
                                     ]
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
-                                    className: "movie-view-button",
+                                    id: "favorite-button",
                                     __source: {
                                         fileName: "src/components/movie-view/movie-view.jsx",
                                         lineNumber: 31
                                     },
                                     __self: this,
-                                    children: "✰"
+                                    children: "★"
                                 })
                             ]
                         }),
@@ -31789,7 +31799,7 @@ function RegistrationView(props) {
                                 },
                                 __self: this,
                                 children: /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
-                                    className: "register-button",
+                                    id: "register-button",
                                     variant: "primary",
                                     type: "submit",
                                     onClick: handleSubmit,
