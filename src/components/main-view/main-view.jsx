@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import myFlixLogo from 'url:~/src/myFlix_logo.png';
 
 import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
@@ -92,14 +94,35 @@ export class MainView extends React.Component {
     // Render list of MovieCard if no movie is selected
     // Go to MovieView if a movie is selected
     return (
+      
       <div className='main-view'>
-        <Row>
+        
+        <Navbar id= 'Nav'>
+        <Container >
+          <Navbar.Brand>
+            <img 
+              src= {myFlixLogo}
+              width="220"
+              height="10"
+              className="d-inline-block align-top"
+              alt="myFlix logo"
+              id= 'logo-img'
+            />
+          </Navbar.Brand>
+        </Container>
+        <LogoutButton
+              logoutUser={(uselessParam) => this.logoutUser(uselessParam)}
+            />
+      </Navbar>
+      
+
+        {/* <Row>
           <Col>
             <LogoutButton
               logoutUser={(uselessParam) => this.logoutUser(uselessParam)}
             />
           </Col>
-        </Row>
+        </Row> */}
         {selectedMovie ? (
           <Row>
             <Col>
@@ -119,7 +142,7 @@ export class MainView extends React.Component {
               </Col>
             </Row>
 
-            <Row className='justify-content-md-center' id= 'cards'>
+            <Row className='justify-content-md-center' id= 'cards' >
               {movies.map((movie) => (
                 <Col md={4}>
                   <MovieCard

@@ -64,7 +64,6 @@ img {
   max-height: 700px;
   height: auto;
   margin: 20px auto;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 #back-button {
@@ -113,11 +112,17 @@ img {
 }
 
 .movie-view__line__value {
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.movie-view__details {
+  font-size: 12px;
+  color: #A6A867;
 }
 
 .description {
   padding-top: 3em;
+  margin-bottom: 1em;
 }
 .registration-view {
   background-color: #000500;
@@ -157,15 +162,16 @@ img {
 #logout-button {
   float: right;
   margin: 10px;
-  background-color: #E3DC95;
-  border: solid #A6A867 2px;
+  margin-bottom: 0px;
+  background-color: #E3DCC2;
+  border: solid #E3DC95 2px;
   color: black;
   transition-duration: 0.5s;
 }
 
 #logout-button:hover {
   cursor: pointer;
-  background-color: #A6A867;
+  background-color: #7A5980;
   color: white;
 }
 .display-2 {
@@ -173,8 +179,18 @@ img {
 }
 
 #cards {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 40rem;
+}
+
+#Nav {
+  background-color: #A6A867;
+}
+
+#logo-img {
+  margin: 0px;
+  margin-top: 10px;
 }
 html body {
   background-color: #7A5980;

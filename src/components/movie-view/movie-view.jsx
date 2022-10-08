@@ -31,25 +31,39 @@ export class MovieView extends React.Component {
             <Button id='favorite-button'>&#9733;</Button>
           </div>
 
+          <div className='movie-view__line description'>
+              <span className='movie-view__line__label'>Description: </span>
+              <span className='movie-view__line__value'>
+                {movie.Description}
+              </span>
+            </div>
+
           <div className='movie-info'>
             <div className='movie-view__line'>
               <span className='movie-view__line__label'>Genre: </span>
               <span className='movie-view__line__value'>
                 {movie.Genre.Name}
               </span>
+              <div>
+              <span className='movie-view__details'>
+                {movie.Genre.Description}
+              </span>
+              </div>
+              
             </div>
+
             <div className='movie-view__line'>
               <span className='movie-view__line__label'>Director: </span>
               <span className='movie-view__line__value'>
                 {movie.Director.Name}
               </span>
-            </div>
-            <div className='movie-view__line description'>
-              <span className='movie-view__line__label'>Description: </span>
-              <span className='movie-view__line__value'>
-                {movie.Description}
+              <div>
+              <span className='movie-view__details'>
+                {movie.Director.Bio}
               </span>
+              </div>
             </div>
+            
           </div>
         </Col>
         <Col lg={4}>
