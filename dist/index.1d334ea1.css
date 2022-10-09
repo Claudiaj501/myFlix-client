@@ -52,17 +52,16 @@ p {
 .movie-view {
   border: 2px solid black;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: #000500;
   color: white;
   margin-top: 60px;
+  padding: 20px;
 }
 
-img {
+#movie-poster img {
   display: block;
   border-radius: 25px;
-  max-width: 100%;
-  max-height: 700px;
+  max-width: 60%;
   height: auto;
   margin: 20px auto;
 }
@@ -182,7 +181,15 @@ img {
 #cards {
   margin-top: 10px;
   margin-bottom: 10px;
-  max-height: 40rem;
+  max-height: 100%;
+}
+
+#cards img {
+  display: block;
+  border-radius: 25px;
+  max-width: 85%;
+  height: auto;
+  margin: 20px auto;
 }
 
 #Nav {

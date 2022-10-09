@@ -9,7 +9,7 @@ export class MovieCard extends React.Component {
 
     return (
       <Card id= 'cards' >
-        <Card.Img variant="top" src={movie.ImagePath} />
+        <Card.Img variant="top" src={movie.ImagePath} crossorigin="anonymous" classname= 'card-img' />
         <Card.Body>
           <Card.Title>{movie.Title}</Card.Title>
           <Card.Text>Director: {movie.Director.Name}</Card.Text>

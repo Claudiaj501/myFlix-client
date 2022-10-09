@@ -104,7 +104,7 @@ export class MainView extends React.Component {
             <img 
               src= {myFlixLogo}
               width="220"
-              height="10"
+              height="auto"
               className="d-inline-block align-top"
               alt="myFlix logo"
               id= 'logo-img'

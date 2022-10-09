@@ -25395,7 +25395,7 @@ class MainView extends _reactDefault.default.Component {
                                 children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
                                     src: _myFlixLogoPngDefault.default,
                                     width: "220",
-                                    height: "10",
+                                    height: "auto",
                                     className: "d-inline-block align-top",
                                     alt: "myFlix logo",
                                     id: "logo-img",
@@ -30932,6 +30932,8 @@ class MovieCard extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx(_cardDefault.default.Img, {
                     variant: "top",
                     src: movie.ImagePath,
+                    crossorigin: "anonymous",
+                    classname: "card-img",
                     __source: {
                         fileName: "src/components/movie-card/movie-card.jsx",
                         lineNumber: 12
@@ -31361,13 +31363,13 @@ class MovieView extends _reactDefault.default.Component {
                 }),
                 /*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
                     lg: 4,
+                    id: "movie-poster",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
                         lineNumber: 70
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                        className: "movie-poster",
                         __source: {
                             fileName: "src/components/movie-view/movie-view.jsx",
                             lineNumber: 71
@@ -31375,6 +31377,7 @@ class MovieView extends _reactDefault.default.Component {
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
                             src: movie.ImagePath,
+                            crossorigin: "anonymous",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
                                 lineNumber: 72

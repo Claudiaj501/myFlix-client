@@ -5,7 +5,16 @@
 #cards {
   margin-top: 10px;
   margin-bottom: 10px;
-  max-height: 40rem;
+  max-height: 100%;
+}
+
+#cards img {
+  display: block;
+  border-radius: 25px;
+  max-width: 85%;
+  // max-height: 30%;
+  height: auto;
+  margin: 20px auto;
 }
 
 #Nav {
