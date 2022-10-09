@@ -142,7 +142,7 @@ export class MainView extends React.Component {
                 <h1 className='display-2'>Movies</h1>
               </Col>
             </Row>
-
+          <Container>
             <Row className='justify-content-md-center' id= 'cards' >
               {movies.map((movie) => (
                 <Col md={4}>
@@ -156,6 +156,7 @@ export class MainView extends React.Component {
                 </Col>
               ))}
             </Row>
+            </Container>
           </div>
         )}
       </div>

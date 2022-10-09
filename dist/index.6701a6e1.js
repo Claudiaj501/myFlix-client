@@ -25475,34 +25475,41 @@ class MainView extends _reactDefault.default.Component {
                                 })
                             })
                         }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_rowDefault.default, {
-                            className: "justify-content-md-center",
-                            id: "cards",
+                        /*#__PURE__*/ _jsxRuntime.jsx(_containerDefault.default, {
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 146
+                                lineNumber: 145
                             },
                             __self: this,
-                            children: movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                    md: 4,
-                                    __source: {
-                                        fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 148
-                                    },
-                                    __self: this,
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
-                                        movie: movie,
-                                        onMovieClick: (movie1)=>{
-                                            this.setSelectedMovie(movie1);
-                                        },
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_rowDefault.default, {
+                                className: "justify-content-md-center",
+                                id: "cards",
+                                __source: {
+                                    fileName: "src/components/main-view/main-view.jsx",
+                                    lineNumber: 146
+                                },
+                                __self: this,
+                                children: movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                        md: 4,
                                         __source: {
                                             fileName: "src/components/main-view/main-view.jsx",
-                                            lineNumber: 149
+                                            lineNumber: 148
                                         },
-                                        __self: this
-                                    }, movie._id)
-                                })
-                            )
+                                        __self: this,
+                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
+                                            movie: movie,
+                                            onMovieClick: (movie1)=>{
+                                                this.setSelectedMovie(movie1);
+                                            },
+                                            __source: {
+                                                fileName: "src/components/main-view/main-view.jsx",
+                                                lineNumber: 149
+                                            },
+                                            __self: this
+                                        }, movie._id)
+                                    })
+                                )
+                            })
                         })
                     ]
                 })
