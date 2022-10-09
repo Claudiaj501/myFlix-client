@@ -16,6 +16,7 @@ export class MovieView extends React.Component {
   render() {
     const { movie, onBackClick } = this.props;
     return (
+      
       <Row className='movie-view'>
         <Col lg={8}>
           <div className='movie-view__title-line'>

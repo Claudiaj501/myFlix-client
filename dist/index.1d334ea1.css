@@ -55,6 +55,7 @@ p {
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: #000500;
   color: white;
+  margin-top: 60px;
 }
 
 img {
@@ -186,11 +187,27 @@ img {
 
 #Nav {
   background-color: #A6A867;
+  width: 100%;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: -10px;
 }
 
 #logo-img {
   margin: 0px;
   margin-top: 10px;
+}
+
+#movie-bar {
+  margin-top: 10px;
+}
+
+.filler {
+  background-color: #ee1515;
+  width: 100%;
+  height: 100px;
+  line-height: 50px;
+  margin-bottom: 20px;
 }
 html body {
   background-color: #7A5980;

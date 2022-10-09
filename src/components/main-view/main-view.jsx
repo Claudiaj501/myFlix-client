@@ -97,7 +97,8 @@ export class MainView extends React.Component {
       
       <div className='main-view'>
         
-        <Navbar id= 'Nav'>
+       
+        <Navbar sticky="top" id= 'Nav' >
         <Container >
           <Navbar.Brand>
             <img 
@@ -115,14 +116,14 @@ export class MainView extends React.Component {
             />
       </Navbar>
       
+      
 
-        {/* <Row>
+        {/* <Row className= 'filler'>
           <Col>
-            <LogoutButton
-              logoutUser={(uselessParam) => this.logoutUser(uselessParam)}
-            />
+
           </Col>
         </Row> */}
+
         {selectedMovie ? (
           <Row>
             <Col>
@@ -136,7 +137,7 @@ export class MainView extends React.Component {
           </Row>
         ) : (
           <div>
-            <Row className='justify-content-md-center'>
+            <Row id= 'movie-bar' className='justify-content-md-center'>
               <Col md={4}>
                 <h1 className='display-2'>Movies</h1>
               </Col>
