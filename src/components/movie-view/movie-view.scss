@@ -1,78 +1,23 @@
-.movie-view {
-  border: 2px solid black;
-  border-radius: 10px;
-  // box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: #000500;
-  color: white;
-  margin-top: 60px;
-  padding: 20px;
+.movie-textarea.card-body {
+  padding: 0 15px 0 0;
 }
 
-#movie-poster img {
+span.movie-description {
   display: block;
-  border-radius: 25px;
-  max-width: 60%;
-  // max-height: 30%;
-  height: auto;
-  margin: 20px auto;
-  // box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  padding-bottom: 15px;
 }
 
-#back-button {
-  font-size: 30px;
-  background-color: white;
-  color: black;
-  border: none;
-  margin: 5px;
-  padding: 0 0 7px 0;
+div.movie-genre-description,
+div.movie-actors {
+  display: block;
+  padding-bottom: 15px;
 }
 
-#favorite-button {
-  font-size: 20px;
-  background-color: #E3DC95;
-  color: #000500;
-  border: solid #A6A867 2px;
-  margin: 5px;
+.label {
+  font-weight: bold;
 }
 
-#favorite-button:hover {
-  cursor: pointer;
-  background-color: #A6A867;
-}
-
-
-#movie-view-button {
-  background-color: #E3DC95;
-  color: #000500;
-  border: solid #A6A867 2px;
-}
-
-#movie-view-button:hover {
-  cursor: pointer;
-  background-color: #A6A867;
-}
-
-.movie-view__title-line {
-  font-size: 28px;
-  font-weight: 600;
-  font-family: Lucida Console;
-  padding: 2px;
-}
-
-.movie-view__line__label {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.movie-view__line__value {
-  font-size: 16px;
-}
-.movie-view__details {
-  font-size: 12px;
-  color: #A6A867;
-}
-  
-.description {
-  padding-top: 3em;
-  margin-bottom: 1em;
+.button-movie-view-add-favorite {
+  position: absolute;
+  right: 10px;
 }

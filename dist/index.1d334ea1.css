@@ -1,214 +1,139 @@
-.login-view {
-  background-color: #000500;
-  border: solid #A6A867 2px;
-  border-radius: 15px;
-  padding: 50px;
-  color: white;
+.login-container {
+  height: 100vh;
 }
 
-.register-row {
-  margin-top: 40px;
-  padding-top: 30px;
-  border-top: solid #7A5980 2px;
+.login-card {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 450px;
 }
 
-#login-button {
-  background-color: #E3DC95;
-  border: solid #A6A867 2px;
-  color: black;
-  transition-duration: 0.5s;
+div.login-form-group-username {
+  margin-bottom: 20px;
 }
 
-#login-button:hover {
-  background-color: #A6A867;
-  color: white;
-}
-
-.login-view__line {
-  margin-top: 10px;
-}
-
-#register-btn {
-  margin-left: 0.1px;
-}
-
-p {
-  margin-right: 0.1px;
-}
-
-@media (min-width: 768px) {
-  .login-form {
-    margin-top: 10px;
-  }
-  .register-row {
-    margin-top: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .login-view {
-    padding: 5px;
-  }
-}
-.movie-view {
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: #000500;
-  color: white;
-  margin-top: 60px;
-  padding: 20px;
-}
-
-#movie-poster img {
-  display: block;
-  border-radius: 25px;
-  max-width: 60%;
-  height: auto;
-  margin: 20px auto;
-}
-
-#back-button {
-  font-size: 30px;
-  background-color: white;
-  color: black;
-  border: none;
-  margin: 5px;
-  padding: 0 0 7px 0;
-}
-
-#favorite-button {
-  font-size: 20px;
-  background-color: #E3DC95;
-  color: #000500;
-  border: solid #A6A867 2px;
-  margin: 5px;
-}
-
-#favorite-button:hover {
-  cursor: pointer;
-  background-color: #A6A867;
-}
-
-#movie-view-button {
-  background-color: #E3DC95;
-  color: #000500;
-  border: solid #A6A867 2px;
-}
-
-#movie-view-button:hover {
-  cursor: pointer;
-  background-color: #A6A867;
-}
-
-.movie-view__title-line {
-  font-size: 28px;
-  font-weight: 600;
-  font-family: Lucida Console;
-  padding: 2px;
-}
-
-.movie-view__line__label {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.movie-view__line__value {
-  font-size: 16px;
-}
-
-.movie-view__details {
-  font-size: 12px;
-  color: #A6A867;
-}
-
-.description {
-  padding-top: 3em;
-  margin-bottom: 1em;
-}
-.registration-view {
-  background-color: #000500;
-  border: solid #A6A867 2px;
-  border-radius: 15px;
-  padding: 50px;
-  color: white;
-}
-
-.registration-form {
-  padding-top: 30px;
-}
-
-.registration-form__label-tips {
-  font-style: italic;
-  font-size: 12px;
-  color: gray;
-  text-align: right;
-}
-
-.registration-form__line {
-  margin-top: 10px;
-}
-
-#register-button {
+.button-login-view {
   margin-top: 20px;
-  background-color: #E3DC95;
-  border: solid #A6A867 2px;
-  color: black;
-  transition-duration: 0.5s;
+  margin-right: 20px;
+}
+.button-movie-card {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.movie-textarea.card-body {
+  padding: 0 15px 0 0;
 }
 
-#register-button:hover {
-  background-color: #A6A867;
-  color: white;
-}
-#logout-button {
-  float: right;
-  margin: 10px;
-  margin-bottom: 0px;
-  background-color: #E3DCC2;
-  border: solid #E3DC95 2px;
-  color: black;
-  transition-duration: 0.5s;
-}
-
-#logout-button:hover {
-  cursor: pointer;
-  background-color: #7A5980;
-  color: white;
-}
-.display-2 {
-  color: white;
-}
-
-#cards {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  max-height: 100%;
-}
-
-#cards img {
+span.movie-description {
   display: block;
-  border-radius: 25px;
-  max-width: 85%;
-  height: auto;
-  margin: 20px auto;
+  padding-bottom: 15px;
 }
 
-#Nav {
-  background-color: #A6A867;
-  margin-left: -10px;
-  margin-right: -20px;
-  margin-top: -10px;
+div.movie-genre-description,
+div.movie-actors {
+  display: block;
+  padding-bottom: 15px;
 }
 
-#logo-img {
-  margin: 0px;
+.label {
+  font-weight: bold;
+}
+
+.button-movie-view-add-favorite {
+  position: absolute;
+  right: 10px;
+}
+.registration-container {
+  height: 100vh;
+}
+
+.registration-card {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 450px;
+}
+
+div.registration-form-group-username,
+div.registration-form-group-password,
+div.registration-form-group-email {
+  margin-bottom: 20px;
+}
+
+.button-registration-view {
+  margin-top: 20px;
+}
+.movie-director-bio > span.label,
+.headline-director-mini-cards {
+  display: block;
+  margin: 15px 0;
+}
+
+.movie-director-birth > span.label,
+.movie-director-death > span.label {
+  font-weight: 400;
+}
+
+.card-group-director-mini-cards {
   margin-top: 10px;
 }
+.movie-genre-description > span.label,
+.headline-genre-mini-cards {
+  display: block;
+  margin: 0 0 15px 0;
+}
 
-#movie-bar {
+.card-group-genre-mini-cards {
   margin-top: 10px;
 }
-html body {
-  background-color: #7A5980;
-  margin: 10px;
+.profile-container {
+  height: 100vh;
+}
+
+div.profile-form-group-username,
+div.profile-form-group-password,
+div.profile-form-group-email {
+  margin-bottom: 20px;
+}
+
+.button-profile-view-update {
+  margin-top: 20px;
+}
+
+.button-profile-view-delete {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+span.label.headline-profile-mini-cards {
+  padding: 30px 0 20px 0;
+}
+
+.profile-movie-card-link {
+  color: white;
+}
+
+.button-profile-view-remove-favorite {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.main-view {
+  padding: 50px 0;
+}
+
+.movie-card {
+  display: flex;
+  padding-bottom: 30px;
+}
+html,
+.app-container {
+  background-color: black;
 }
 /*# sourceMappingURL=index.1d334ea1.css.map */

@@ -1,35 +1,21 @@
-.registration-view {
-  background-color: #000500;
-  border: solid #A6A867 2px;
-  border-radius: 15px;
-  padding: 50px;
-  color: white;
+.registration-container {
+  height: 100vh;
 }
 
-.registration-form {
-  padding-top: 30px;
+.registration-card {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 450px;
 }
 
-.registration-form__label-tips {
-  font-style: italic;
-  font-size: 12px;
-  color: gray;
-  text-align: right;
+div.registration-form-group-username,
+div.registration-form-group-password,
+div.registration-form-group-email {
+  margin-bottom: 20px;
 }
 
-.registration-form__line {
-  margin-top: 10px;
-}
-
-#register-button {
+.button-registration-view {
   margin-top: 20px;
-  background-color: #E3DC95;
-  border: solid #A6A867 2px;
-  color: black;
-  transition-duration: 0.5s;
-}
-
-#register-button:hover {
-  background-color: #A6A867; 
-  color: white;
 }

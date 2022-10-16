@@ -1,169 +1,148 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react';
+import axios from 'axios';
+import PropTypes from 'prop-types';
+import { Container, Form, Button, Card } from 'react-bootstrap';
+
+import { Link } from 'react-router-dom';
 
 import './registration-view.scss';
-  
-export function RegistrationView(props) {
+export default function RegistrationView(props) {
   const [username, setUsername] = useState('');
-  const [password1, setPassword1] = useState('');
-  const [password2, setPassword2] = useState('');
+  const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-  const [birth, setBirthday] = useState('');
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    props.onRegister(true, username);
+  const [birthday, setBirthday] = useState('');
+  // Declare hook for each input
+  const [usernameErr, setUsernameErr] = useState('');
+  const [passwordErr, setPasswordErr] = useState('');
+  const [emailErr, setEmailErr] = useState('');
+  const [birthdayErr, setBirthdayErr] = useState('');
+
+  // Validate user inputs
+  const validate = () => {
+    let isReq = true;
+    if (!username) {
+      setUsernameErr('Username required');
+      isReq = false;
+    } else if (username.length < 5) {
+      setUsernameErr('Username must be 5 or more characters');
+      isReq = false;
+    }
+    if (!password) {
+      setPasswordErr('Password required');
+      isReq = false;
+    } else if (password.length < 6) {
+      setPasswordErr('Password must be 6 or more characters');
+      isReq = false;
+    }
+    if (!email) {
+      setEmailErr('Email required');
+      isReq = false;
+    } else if (email.indexOf('@') === -1) {
+      setEmailErr('Email must be a valid email address');
+      isReq = false;
+    }
+
+    return isReq;
   };
 
-  let labelSize = 4;
-  let fieldSize = 5;
-  let emptySize = 1;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const isReq = validate();
+    if (isReq) {
+      axios
+        .post('https://myflix-firstapi.herokuapp.com/users', {
+          Username: username,
+          Password: password,
+          Email: email,
+          Birthday: birthday,
+        })
+        .then((res) => {
+          const data = res.data;
+          console.log(data);
+          alert('Registration successful! Please login.');
+          window.open('/', '_self');
+        })
+        .catch((e) => {
+          console.error(e);
+          alert('Unable to register :(');
+        });
+    }
+  };
 
   return (
-    <div className='registration-view'>
-      <Row>
-        <Col>
-          <h2 className='display-4'>Sign up for a free MyFlix account</h2>
-        </Col>
-      </Row>
-
-      <Form className='registration-form'>
-
-        <Form.Group className='registration-form__line'>
-          <Row>
-            <Col md={emptySize}></Col>
-            <Col md={labelSize}>
-              <Form.Label className='registration-form__line-label'>
-                Username:{' '}
-                <span className='registration-form__label-tips'>
-                (*required)
-                </span>
-              </Form.Label>
-            </Col>
-            <Col md={fieldSize}>
+    <Container className="registration-container">
+      <Card bg="dark" text="light" className="registration-card">
+        <Card.Header className="text-center" as="h5">
+          Register
+        </Card.Header>
+        <Card.Body>
+          <Form>
+            <Form.Group
+              className="registration-form-group-username"
+              controlId="formGroupUsername"
+            >
+              <Form.Label>Username:</Form.Label>
               <Form.Control
-                className='registration-form__line__input-field'
-                type='test'
+                type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-              />
-            </Col>
-          </Row>
-        </Form.Group>
-
-        <Form.Group className='registration-form__line'>
-          <Row>
-            <Col md={emptySize}></Col>
-            <Col md={labelSize}>
-              <Form.Label className='registration-form__line-label'>
-                Enter desired password{' '}
-                <span className='registration-form__label-tips'>
-                (*required)
-                </span>
-              </Form.Label>
-            </Col>
-            <Col md={fieldSize}>
-              <Form.Control
-                className='registration-form__line__input-field'
-                type='password'
-                value={password1}
-                onChange={(e) => setPassword1(e.target.value)}
+                placeholder="Enter your username"
                 required
-                minLength="8"
-                placeholder="at least 8 characters"
               />
-            </Col>
-          </Row>
-        </Form.Group>
-
-        <Form.Group className='registration-form__line'>
-          <Row>
-            <Col md={emptySize}></Col>
-            <Col md={labelSize}>
-              <Form.Label className='registration-form__line-label'>
-                Re-enter password:{' '}
-                <span className='registration-form__label-tips'>
-                (*required)
-                </span>
-              </Form.Label>
-            </Col>
-            <Col md={fieldSize}>
+              {usernameErr && <p>{usernameErr}</p>}
+            </Form.Group>
+            <Form.Group
+              className="registration-form-group-password"
+              controlId="formGroupPassword"
+            >
+              <Form.Label>Password:</Form.Label>
               <Form.Control
-                className='registration-form__line__input-field'
-                type='password'
-                value={password2}
-                onChange={(e) => setPassword2(e.target.value)}
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Your password must be 6 or more characters"
+                minLength="6"
+                required
               />
-            </Col>
-          </Row>
-        </Form.Group>
-
-        <Form.Group className='registration-form__line'>
-          <Row>
-            <Col md={emptySize}></Col>
-            <Col md={labelSize}>
-              <Form.Label className='registration-form__line-label'>
-                Email:{' '}
-                <span className='registration-form__label-tips'>
-                  (*required)
-                </span>
-              </Form.Label>
-            </Col>
-            <Col md={fieldSize}>
+              {passwordErr && <p>{passwordErr}</p>}
+            </Form.Group>
+            <Form.Group
+              className="registration-form-group-email"
+              controlId="formGroupEmail"
+            >
+              <Form.Label>Email:</Form.Label>
               <Form.Control
-                className='registration-form__line__input-field'
-                type='email'
+                type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email address"
+                required
               />
-            </Col>
-          </Row>
-        </Form.Group>
-
-        <Form.Group className='registration-form__line'>
-          <Row>
-            <Col md={emptySize}></Col>
-            <Col md={labelSize}>
-              <Form.Label className='registration-form__line-label'>
-                Birthday:{' '}
-                <span className='registration-form__label-tips'>
-                  (optional)
-                </span>
-              </Form.Label>
-            </Col>
-            <Col md={fieldSize}>
+              {emailErr && <p>{emailErr}</p>}
+            </Form.Group>
+            <Form.Group controlId="formGroupBirthday">
+              <Form.Label>Date of birth:</Form.Label>
               <Form.Control
-                className='registration-form__line__input-field'
-                type='date'
-                value={birth}
+                type="date"
+                value={birthday}
                 onChange={(e) => setBirthday(e.target.value)}
+                placeholder="Enter your birthday"
               />
-            </Col>
-          </Row>
-        </Form.Group>
-
-        <Row>
-          <Col md={labelSize + fieldSize + emptySize - 2}></Col>
-          <Col md={1}>
+              {birthdayErr && <p>{birthdayErr}</p>}
+            </Form.Group>
             <Button
-              id='register-button'
-              variant='primary'
-              type='submit'
+              className="button-registration-view"
+              variant="secondary"
+              type="submit"
               onClick={handleSubmit}
             >
-              Register
+              Submit
             </Button>
-          </Col>
-        </Row>
-      </Form>
-    </div>
+          </Form>
+        </Card.Body>
+      </Card>
+    </Container>
   );
 }
 
-RegistrationView.propTypes = {
-  onRegistration: PropTypes.func.isRequired,
-
-};
+RegistrationView.propTypes = {};

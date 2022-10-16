@@ -18,10 +18,12 @@
   "homepage": "https://github.com/Claudiaj501/myFlix-client#readme",
   "dependencies": {
     "axios": "^0.27.2",
+    "moment": "^2.29.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
     "@parcel/transformer-image": "^2.0.0-rc.0",
