@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import { BrowserRouter as Router, Route, Redirect, Routes } from 'react-router-dom';
 
@@ -297,4 +297,4 @@ export default class MainView extends React.Component {
   }
 }
 
-MainView.propTypes = {};
+// MainView.propTypes = {};
