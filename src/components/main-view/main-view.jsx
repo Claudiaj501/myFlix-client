@@ -127,7 +127,7 @@ export default class MainView extends React.Component {
       <Router>
         <NavBar user={user} />
         <Row className="main-view justify-content-md-center">
-         <Routes>
+         {/* <Routes> */}
           <Route
             exact
             path="/" 
@@ -290,7 +290,7 @@ export default class MainView extends React.Component {
               );
             }}
           />
-          </Routes>
+          {/* </Routes> */}
         </Row>
       </Router>
     );

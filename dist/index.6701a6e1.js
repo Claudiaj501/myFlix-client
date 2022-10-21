@@ -25382,198 +25382,191 @@ class MainView extends _reactDefault.default.Component {
                     },
                     __self: this
                 }),
-                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
+                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     className: "main-view justify-content-md-center",
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
                         lineNumber: 129
                     },
                     __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactRouterDom.Routes, {
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 130
-                        },
-                        __self: this,
-                        children: [
-                            /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                                exact: true,
-                                path: "/",
-                                render: ()=>{
-                                    /* If there is no user, the LoginView is rendered. If there is a user logged in, 
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                            exact: true,
+                            path: "/",
+                            render: ()=>{
+                                /* If there is no user, the LoginView is rendered. If there is a user logged in, 
        the user details are passed as a prop to the LoginView */ if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_loginViewDefault.default, {
-                                            movies: movies,
-                                            onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_loginViewDefault.default, {
+                                        movies: movies,
+                                        onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                    })
+                                }));
+                                // Before the movies have been loaded
+                                if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                    className: "main-view"
+                                }));
+                                return movies.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                        md: 6,
+                                        lg: 3,
+                                        className: "movie-card",
+                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_movieCardDefault.default, {
+                                            movie: m
                                         })
-                                    }));
-                                    // Before the movies have been loaded
-                                    if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                        className: "main-view"
-                                    }));
-                                    return movies.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                            md: 6,
-                                            lg: 3,
-                                            className: "movie-card",
-                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_movieCardDefault.default, {
-                                                movie: m
-                                            })
-                                        }, m._id)
-                                    );
-                                },
-                                __source: {
-                                    fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 131
-                                },
-                                __self: this
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                                path: "/register",
-                                render: ()=>{
-                                    if (user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
-                                        to: "/"
-                                    }));
-                                    return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_registrationViewDefault.default, {
-                                        })
-                                    }));
-                                },
-                                __source: {
-                                    fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 156
-                                },
-                                __self: this
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                                path: `/users/${user}`,
-                                render: ({ history  })=>{
-                                    /* If there is no user, the LoginView is rendered. If there is a user logged in, 
+                                    }, m._id)
+                                );
+                            },
+                            __source: {
+                                fileName: "src/components/main-view/main-view.jsx",
+                                lineNumber: 131
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                            path: "/register",
+                            render: ()=>{
+                                if (user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
+                                    to: "/"
+                                }));
+                                return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_registrationViewDefault.default, {
+                                    })
+                                }));
+                            },
+                            __source: {
+                                fileName: "src/components/main-view/main-view.jsx",
+                                lineNumber: 156
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                            path: `/users/${user}`,
+                            render: ({ history  })=>{
+                                /* If there is no user, the LoginView is rendered. If there is a user logged in, 
        the user details are passed as a prop to the LoginView */ if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_loginViewDefault.default, {
-                                            movies: movies,
-                                            onLoggedIn: (user1)=>this.onLoggedIn(user1)
-                                        })
-                                    }));
-                                    // Before the movies have been loaded
-                                    if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                        className: "main-view"
-                                    }));
-                                    if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
-                                        to: "/"
-                                    }));
-                                    return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_profileViewDefault.default, {
-                                            favouriteMovies: favoriteMovies.map((movieId)=>{
-                                                return movies.find((m)=>m._id === movieId
-                                                );
-                                            }),
-                                            user: user,
-                                            removeFavourite: this.removeFavourite.bind(this),
-                                            onBackClick: ()=>history.goBack()
-                                        })
-                                    }));
-                                },
-                                __source: {
-                                    fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 167
-                                },
-                                __self: this
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                                path: "/movies/:movieId",
-                                render: ({ match , history  })=>{
-                                    /* If there is no user, the LoginView is rendered. If there is a user logged in, 
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_loginViewDefault.default, {
+                                        movies: movies,
+                                        onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                    })
+                                }));
+                                // Before the movies have been loaded
+                                if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                    className: "main-view"
+                                }));
+                                if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
+                                    to: "/"
+                                }));
+                                return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_profileViewDefault.default, {
+                                        favouriteMovies: favoriteMovies.map((movieId)=>{
+                                            return movies.find((m)=>m._id === movieId
+                                            );
+                                        }),
+                                        user: user,
+                                        removeFavourite: this.removeFavourite.bind(this),
+                                        onBackClick: ()=>history.goBack()
+                                    })
+                                }));
+                            },
+                            __source: {
+                                fileName: "src/components/main-view/main-view.jsx",
+                                lineNumber: 167
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                            path: "/movies/:movieId",
+                            render: ({ match , history  })=>{
+                                /* If there is no user, the LoginView is rendered. If there is a user logged in, 
        the user details are passed as a prop to the LoginView */ if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_loginViewDefault.default, {
-                                            movies: movies,
-                                            onLoggedIn: (user1)=>this.onLoggedIn(user1)
-                                        })
-                                    }));
-                                    // Before the movies have been loaded
-                                    if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                        className: "main-view"
-                                    }));
-                                    return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        md: 8,
-                                        className: "movie-view",
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_movieViewDefault.default, {
-                                            movie: movies.find((m)=>m._id === match.params.movieId
-                                            ),
-                                            addFavourite: this.addFavourite.bind(this),
-                                            onBackClick: ()=>history.goBack()
-                                        })
-                                    }));
-                                },
-                                __source: {
-                                    fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 199
-                                },
-                                __self: this
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                                path: "/directors/:name",
-                                render: ({ match , history  })=>{
-                                    /* If there is no user, the LoginView is rendered. If there is a user logged in, 
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_loginViewDefault.default, {
+                                        movies: movies,
+                                        onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                    })
+                                }));
+                                // Before the movies have been loaded
+                                if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                    className: "main-view"
+                                }));
+                                return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                    md: 8,
+                                    className: "movie-view",
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_movieViewDefault.default, {
+                                        movie: movies.find((m)=>m._id === match.params.movieId
+                                        ),
+                                        addFavourite: this.addFavourite.bind(this),
+                                        onBackClick: ()=>history.goBack()
+                                    })
+                                }));
+                            },
+                            __source: {
+                                fileName: "src/components/main-view/main-view.jsx",
+                                lineNumber: 199
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                            path: "/directors/:name",
+                            render: ({ match , history  })=>{
+                                /* If there is no user, the LoginView is rendered. If there is a user logged in, 
        the user details are passed as a prop to the LoginView */ if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_loginViewDefault.default, {
-                                            movies: movies,
-                                            onLoggedIn: (user1)=>this.onLoggedIn(user1)
-                                        })
-                                    }));
-                                    // Before the movies have been loaded
-                                    if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                        className: "main-view"
-                                    }));
-                                    return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        md: 8,
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_directorViewDefault.default, {
-                                            movies: movies.filter((m)=>m.Director.Name === match.params.name
-                                            ),
-                                            director: movies.find((m)=>m.Director.Name === match.params.name
-                                            ).Director,
-                                            onBackClick: ()=>history.goBack()
-                                        })
-                                    }));
-                                },
-                                __source: {
-                                    fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 227
-                                },
-                                __self: this
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                                path: "/genres/:name",
-                                render: ({ match , history  })=>{
-                                    /* If there is no user, the LoginView is rendered. If there is a user logged in, 
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_loginViewDefault.default, {
+                                        movies: movies,
+                                        onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                    })
+                                }));
+                                // Before the movies have been loaded
+                                if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                    className: "main-view"
+                                }));
+                                return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                    md: 8,
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_directorViewDefault.default, {
+                                        movies: movies.filter((m)=>m.Director.Name === match.params.name
+                                        ),
+                                        director: movies.find((m)=>m.Director.Name === match.params.name
+                                        ).Director,
+                                        onBackClick: ()=>history.goBack()
+                                    })
+                                }));
+                            },
+                            __source: {
+                                fileName: "src/components/main-view/main-view.jsx",
+                                lineNumber: 227
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                            path: "/genres/:name",
+                            render: ({ match , history  })=>{
+                                /* If there is no user, the LoginView is rendered. If there is a user logged in, 
        the user details are passed as a prop to the LoginView */ if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_loginViewDefault.default, {
-                                            movies: movies,
-                                            onLoggedIn: (user1)=>this.onLoggedIn(user1)
-                                        })
-                                    }));
-                                    // Before the movies have been loaded
-                                    if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                        className: "main-view"
-                                    }));
-                                    return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        md: 8,
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_genreViewDefault.default, {
-                                            movies: movies.filter((m)=>m.Genre.Name === match.params.name
-                                            ),
-                                            genre: movies.find((m)=>m.Genre.Name === match.params.name
-                                            ).Genre,
-                                            onBackClick: ()=>history.goBack()
-                                        })
-                                    }));
-                                },
-                                __source: {
-                                    fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 260
-                                },
-                                __self: this
-                            })
-                        ]
-                    })
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_loginViewDefault.default, {
+                                        movies: movies,
+                                        onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                    })
+                                }));
+                                // Before the movies have been loaded
+                                if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                    className: "main-view"
+                                }));
+                                return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                    md: 8,
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_genreViewDefault.default, {
+                                        movies: movies.filter((m)=>m.Genre.Name === match.params.name
+                                        ),
+                                        genre: movies.find((m)=>m.Genre.Name === match.params.name
+                                        ).Genre,
+                                        onBackClick: ()=>history.goBack()
+                                    })
+                                }));
+                            },
+                            __source: {
+                                fileName: "src/components/main-view/main-view.jsx",
+                                lineNumber: 260
+                            },
+                            __self: this
+                        })
+                    ]
                 })
             ]
         }));
