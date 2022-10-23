@@ -18,13 +18,13 @@ export default function ProfileView(props) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-  const [birthday, setBirthday] = useState('');
+  const [birth, setBirthday] = useState('');
   // Declare hook for each input
   const [usernameErr, setUsernameErr] = useState('');
   const [passwordErr, setPasswordErr] = useState('');
   const [emailErr, setEmailErr] = useState('');
   const [birthdayErr, setBirthdayErr] = useState('');
-  const { user, favoriteMovies, removeFavorite, onBackClick } = props;
+  const { user, favouriteMovies, removeFavorite, onBackClick } = props;
 
   // Validate user inputs
   const validate = () => {
@@ -70,7 +70,7 @@ export default function ProfileView(props) {
             Username: username,
             Password: password,
             Email: email,
-            Birthday: birthday,
+            Birthday: birth,
           },
           {
             headers: {
@@ -108,7 +108,7 @@ export default function ProfileView(props) {
         .catch((e) => console.log(e));
     }
   };
-  console.log(favoriteMovies);
+  console.log(favouriteMovies);
 
   return (
     <Container className="profile-container">
@@ -173,7 +173,7 @@ export default function ProfileView(props) {
                   <Form.Label>Date of birth:</Form.Label>
                   <Form.Control
                     type="date"
-                    value={birthday}
+                    value={birth}
                     onChange={(e) => setBirthday(e.target.value)}
                     placeholder="Enter your birthday"
                   />
@@ -189,7 +189,7 @@ export default function ProfileView(props) {
                 </Button>
               </Form>
               <span className="label headline-profile-mini-cards">
-                My favorite movies
+                My favourite movies
               </span>
             </Card>
             <Card bg="dark" border="dark" text="light">
@@ -209,7 +209,7 @@ export default function ProfileView(props) {
             </Card>
           </CardGroup>
           <CardGroup className="card-group-profile-mini-cards">
-            {favoriteMovies.map((m) => (
+            {favouriteMovies.map((m) => (
               <Col
                 md={6}
                 lg={3}
@@ -261,5 +261,5 @@ export default function ProfileView(props) {
 }
 
 ProfileView.propTypes = {
-  favoriteMovies: PropTypes.array.isRequired,
+  favouriteMovies: PropTypes.array.isRequired,
 };

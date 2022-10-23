@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { BrowserRouter as Router, Route, Redirect, Routes } from 'react-router-dom';
 
@@ -60,8 +60,8 @@ export default class MainView extends React.Component {
   addFavorite(movieId) {
     const { user, favouriteMovies } = this.state;
     const token = localStorage.getItem('token');
-    if (favoriteMovies.some((favId) => favId === movieId)) {
-      console.log('Movie already added to favorites!');
+    if (favouriteMovies.some((favId) => favId === movieId)) {
+      console.log('Movie already added to favourites!');
     } else {
       if (token !== null && user !== null) {
         this.setState({
@@ -185,11 +185,11 @@ export default class MainView extends React.Component {
               return (
                 <Col>
                   <ProfileView
-                    favouriteMovies={favoriteMovies.map((movieId) => {
+                    favouriteMovies={favouriteMovies.map((movieId) => {
                       return movies.find((m) => m._id === movieId);
                     })}
                     user={user}
-                    removeFavourite={this.removeFavourite.bind(this)}
+                    removeFavorite={this.removeFavorite.bind(this)}
                     onBackClick={() => history.goBack()}
                   />
                 </Col>
@@ -217,7 +217,7 @@ export default class MainView extends React.Component {
                 <Col md={8} className="movie-view">
                   <MovieView
                     movie={movies.find((m) => m._id === match.params.movieId)}
-                    addFavourite={this.addFavourite.bind(this)}
+                    addFavorite={this.addFavorite.bind(this)}
                     onBackClick={() => history.goBack()}
                   />
                 </Col>
@@ -297,4 +297,4 @@ export default class MainView extends React.Component {
   }
 }
 
-// MainView.propTypes = {};
+MainView.propTypes = {};
