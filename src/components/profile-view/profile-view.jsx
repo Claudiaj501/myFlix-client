@@ -24,7 +24,7 @@ export default function ProfileView(props) {
   const [passwordErr, setPasswordErr] = useState('');
   const [emailErr, setEmailErr] = useState('');
   const [birthdayErr, setBirthdayErr] = useState('');
-  const { user, favouriteMovies, removeFavorite, onBackClick } = props;
+  const { user, favouriteMovies, removeFavourite, onBackClick } = props;
 
   // Validate user inputs
   const validate = () => {
@@ -235,7 +235,7 @@ export default function ProfileView(props) {
                     variant="outline-danger"
                     size="sm"
                     type="button"
-                    onClick={() => removeFavorite(m._id)}
+                    onClick={() => removeFavourite(m._id)}
                   >
                     Remove
                   </Button>

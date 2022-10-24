@@ -25463,7 +25463,7 @@ class MainView extends _reactDefault.default.Component {
                                             );
                                         }),
                                         user: user,
-                                        removeFavorite: this.removeFavorite.bind(this),
+                                        removeFavourite: this.removeFavourite.bind(this),
                                         onBackClick: ()=>history.goBack()
                                     })
                                 }));
@@ -25494,7 +25494,7 @@ class MainView extends _reactDefault.default.Component {
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_movieViewDefault.default, {
                                         movie: movies.find((m)=>m._id === match.params.movieId
                                         ),
-                                        addFavorite: this.addFavorite.bind(this),
+                                        addFavourite: this.addFavourite.bind(this),
                                         onBackClick: ()=>history.goBack()
                                     })
                                 }));
@@ -44771,7 +44771,7 @@ function ProfileView(props) {
     const [passwordErr, setPasswordErr] = _react.useState('');
     const [emailErr, setEmailErr] = _react.useState('');
     const [birthdayErr, setBirthdayErr] = _react.useState('');
-    const { user , favouriteMovies , removeFavorite , onBackClick  } = props;
+    const { user , favouriteMovies , removeFavourite , onBackClick  } = props;
     // Validate user inputs
     const validate = ()=>{
         let isReq = true;
@@ -45201,7 +45201,7 @@ function ProfileView(props) {
                                                 variant: "outline-danger",
                                                 size: "sm",
                                                 type: "button",
-                                                onClick: ()=>removeFavorite(m._id)
+                                                onClick: ()=>removeFavourite(m._id)
                                                 ,
                                                 __source: {
                                                     fileName: "src/components/profile-view/profile-view.jsx",
@@ -45373,7 +45373,7 @@ var _reactRouterDom = require("react-router-dom");
 var _movieViewScss = require("./movie-view.scss");
 class MovieView extends _reactDefault.default.Component {
     render() {
-        const { movie , addFavorite , onBackClick  } = this.props;
+        const { movie , addFavourite , onBackClick  } = this.props;
         return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
             bg: "dark",
             text: "light",
@@ -45398,14 +45398,14 @@ class MovieView extends _reactDefault.default.Component {
                             variant: "outline-warning",
                             size: "sm",
                             type: "button",
-                            onClick: ()=>addFavorite(movie._id)
+                            onClick: ()=>addFavourite(movie._id)
                             ,
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
                                 lineNumber: 16
                             },
                             __self: this,
-                            children: "Add to favorites"
+                            children: "Add to favourites"
                         })
                     ]
                 }),

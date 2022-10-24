@@ -189,7 +189,7 @@ export default class MainView extends React.Component {
                       return movies.find((m) => m._id === movieId);
                     })}
                     user={user}
-                    removeFavorite={this.removeFavorite.bind(this)}
+                    removeFavourite={this.removeFavourite.bind(this)}
                     onBackClick={() => history.goBack()}
                   />
                 </Col>
@@ -217,7 +217,7 @@ export default class MainView extends React.Component {
                 <Col md={8} className="movie-view">
                   <MovieView
                     movie={movies.find((m) => m._id === match.params.movieId)}
-                    addFavorite={this.addFavorite.bind(this)}
+                    addFavourite={this.addFavourite.bind(this)}
                     onBackClick={() => history.goBack()}
                   />
                 </Col>
