@@ -25494,7 +25494,7 @@ class MainView extends _reactDefault.default.Component {
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_movieViewDefault.default, {
                                         movie: movies.find((m)=>m._id === match.params.movieId
                                         ),
-                                        addFavourite: this.addFavourite.bind(this),
+                                        addFavourite: this.addFavorite.bind(this),
                                         onBackClick: ()=>history.goBack()
                                     })
                                 }));

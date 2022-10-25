@@ -217,7 +217,7 @@ export default class MainView extends React.Component {
                 <Col md={8} className="movie-view">
                   <MovieView
                     movie={movies.find((m) => m._id === match.params.movieId)}
-                    addFavourite={this.addFavourite.bind(this)}
+                    addFavourite={this.addFavorite.bind(this)}
                     onBackClick={() => history.goBack()}
                   />
                 </Col>
