@@ -58,7 +58,6 @@ export default function RegistrationView(props) {
         })
         .then((res) => {
           const data = res.data;
-          console.log(data);
           alert('Registration successful! Please login.');
           window.open('/', '_self');
         })
