@@ -84,7 +84,8 @@ function ProfileView(props) {
           const data = res.data;
           updateUser(data.Username);
           localStorage.setItem('user', data.Username);
-          alert('Update successful! Please log in with your new credentials');
+          alert('Update successful!');
+          window.open('/', '_self');
         })
         .catch((e) => {
           console.error(e);
