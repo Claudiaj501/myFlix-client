@@ -83,8 +83,8 @@ function ProfileView(props) {
         .then((res) => {
           const data = res.data;
           updateUser(data.Username);
-          localStorage.setItem('user', data.Username);
-          alert('Update successful!');
+          localStorage.clear();
+          alert('Update successful! Please log in again.');
           window.open('/', '_self');
         })
         .catch((e) => {
